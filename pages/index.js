@@ -1,21 +1,12 @@
 import React, { useEffect, useState } from "react";
 import AppLayout from "../component/Layout/Layout";
 import Head from "next/head";
-
 import Hero from "./component/hero";
 import MostPopular from "./component/MostPopular";
 import TrendingTopics from "./component/TrendingTopics";
 import RecentPosts from "./component/RecentPosts";
 
 function Home() {
-  useEffect(() => {
-    fetch("https://softwareprodigies.com/api/home")
-      .then((res) => res.json())
-      .then((result) => {
-        console.log(result);
-        setHome(result);
-      });
-  }, []);
   return (
     <>
       <Head>

@@ -21,6 +21,20 @@ function Header() {
     };
   }, []);
 
+  // =============toggle search box =============================
+  const [formSearchVisible, setFormSearchVisible] = useState(false);
+
+  const toggleFormSearch = () => {
+    setFormSearchVisible(!formSearchVisible);
+  };
+
+  // ==============toggle mobile menu =========
+
+  const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
+
+  const toggleMobile = () => {
+    setToggleMobileMenu(!toggleMobileMenu);
+  };
   return (
     <>
       <header
@@ -71,15 +85,27 @@ function Header() {
                   </li>
                 </ul>
               </nav>
-              <div className="burger-icon burger-icon-white">
+              <div
+                className={`burger-icon burger-icon-white ${
+                  toggleMobileMenu ? "burger-close" : ""
+                }`}
+                onClick={toggleMobile}
+              >
                 <span className="burger-icon-top"></span>
                 <span className="burger-icon-mid"></span>
                 <span className="burger-icon-bottom"></span>
               </div>
             </div>
             <div className="header-right text-end">
-              <a className="btn btn-search" href="#"></a>
-              <div className="form-search p-20">
+              <a
+                className="btn btn-search"
+                href="#"
+                onClick={toggleFormSearch}
+              ></a>
+              <div
+                className="form-search p-20"
+                style={{ display: formSearchVisible ? "block" : "none" }}
+              >
                 <form action="#">
                   <input
                     className="form-control"
@@ -117,7 +143,11 @@ function Header() {
           </div>
         </div>
       </header>
-      <div className="mobile-header-active mobile-header-wrapper-style perfect-scrollbar bg-gray-900">
+      <div
+        className={`mobile-header-active mobile-header-wrapper-style perfect-scrollbar bg-gray-900 ${
+          toggleMobileMenu ? "sidebar-visible" : ""
+        }`}
+      >
         <div className="mobile-header-wrapper-inner">
           <div className="mobile-header-content-area">
             <div className="mobile-logo border-gray-800">

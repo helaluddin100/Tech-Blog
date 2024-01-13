@@ -1,177 +1,55 @@
 import React from "react";
+import useSWR from "swr";
+import Fetcher from "../api/Fetcher";
 
 function hero() {
+  const baseuri = process.env.NEXT_PUBLIC_BACKEND_URL;
+  console.log("baseuri:", baseuri);
+  const { data, error } = useSWR(`${baseuri}/api/allcategory`, Fetcher);
+  if (error) {
+    return <h1>failed to load</h1>;
+  }
+  if (!data) {
+    return <div>loading...</div>;
+  }
+
   return (
     <div>
+      {/* Your existing code */}
       <div className="banner banner-home2">
-        <div className="text-center">
-          <h6 className="color-gray-600">Welcome to our blog</h6>
-          <h1 className="color-white">
-            Being<span className="color-linear"> Unique</span> is better
-            <br className="d-none d-lg-block" />
+        <div class="text-center">
+          <h6 class="color-gray-600">Welcome to our blog</h6>
+          <h1 class="color-white">
+            Being<span class="color-linear"> Unique</span> is better
+            <br class="d-none d-lg-block" />
             than being
-            <span className="color-linear">Erfect</span>
+            <span class="color-linear">Erfect</span>
           </h1>
         </div>
         <div className="text-center mt-50">
           <ul className="list-tags-col-5 mb-50 text-center">
-            <li>
-              <div
-                className="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp"
-                data-wow-delay="0s"
-              >
-                <div className="card-image">
-                  <a href="blog-archive.html">
-                    <img src="assets/imgs/page/homepage1/tag1.png" alt="Genz" />
-                  </a>
+            {data.map((category) => (
+              <li key={category.id}>
+                <div
+                  className="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp"
+                  data-wow-delay="0s"
+                >
+                  <div className="card-image">
+                    <a href="blog-archive.html">
+                      <img
+                        src={`${baseuri}/` + "image/" + category.image}
+                        alt={category.name}
+                      />
+                    </a>
+                  </div>
+                  <div className="card-info">
+                    <a className="color-gray-500" href="blog-archive.html">
+                      {category.name}
+                    </a>
+                  </div>
                 </div>
-                <div className="card-info">
-                  <a className="color-gray-500" href="blog-archive.html">
-                    Travel
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div
-                className="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp"
-                data-wow-delay="0.1s"
-              >
-                <div className="card-image">
-                  <a href="blog-archive.html">
-                    <img src="assets/imgs/page/homepage1/tag2.png" alt="Genz" />
-                  </a>
-                </div>
-                <div className="card-info">
-                  <a className="color-gray-500" href="blog-archive.html">
-                    {" "}
-                    Culture
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div
-                className="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp"
-                data-wow-delay="0.2s"
-              >
-                <div className="card-image">
-                  <a href="blog-archive.html">
-                    <img src="assets/imgs/page/homepage1/tag3.png" alt="Genz" />
-                  </a>
-                </div>
-                <div className="card-info">
-                  <a className="color-gray-500" href="blog-archive.html">
-                    Lifestyle
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div
-                className="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp"
-                data-wow-delay="0.3s"
-              >
-                <div className="card-image">
-                  <a href="blog-archive.html">
-                    <img src="assets/imgs/page/homepage1/tag4.png" alt="Genz" />
-                  </a>
-                </div>
-                <div className="card-info">
-                  <a className="color-gray-500" href="blog-archive.html">
-                    Fashion
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div
-                className="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp"
-                data-wow-delay="0.4s"
-              >
-                <div className="card-image">
-                  <a href="blog-archive.html">
-                    <img src="assets/imgs/page/homepage1/tag5.png" alt="Genz" />
-                  </a>
-                </div>
-                <div className="card-info">
-                  <a className="color-gray-500" href="blog-archive.html">
-                    Food
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div
-                className="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp"
-                data-wow-delay="0.0s"
-              >
-                <div className="card-image">
-                  <a href="blog-archive.html">
-                    <img src="assets/imgs/page/homepage1/tag7.png" alt="Genz" />
-                  </a>
-                </div>
-                <div className="card-info">
-                  <a className="color-gray-500" href="blog-archive.html">
-                    Animal
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div
-                className="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp"
-                data-wow-delay="0.1s"
-              >
-                <div className="card-image">
-                  <a href="blog-archive.html">
-                    <img src="assets/imgs/page/homepage1/tag8.png" alt="Genz" />
-                  </a>
-                </div>
-                <div className="card-info">
-                  <a className="color-gray-500" href="blog-archive.html">
-                    Minimal
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div
-                className="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp"
-                data-wow-delay="0.2s"
-              >
-                <div className="card-image">
-                  <a href="blog-archive.html">
-                    <img src="assets/imgs/page/homepage1/tag9.png" alt="Genz" />
-                  </a>
-                </div>
-                <div className="card-info">
-                  <a className="color-gray-500" href="blog-archive.html">
-                    Interior
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div
-                className="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp"
-                data-wow-delay="0.3s"
-              >
-                <div className="card-image">
-                  <a href="blog-archive.html">
-                    <img
-                      src="assets/imgs/page/homepage1/tag10.png"
-                      alt="Genz"
-                    />
-                  </a>
-                </div>
-                <div className="card-info">
-                  <a className="color-gray-500" href="blog-archive.html">
-                    Plant
-                  </a>
-                </div>
-              </div>
-            </li>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
