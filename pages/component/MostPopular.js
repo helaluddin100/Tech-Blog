@@ -3,7 +3,6 @@ import useSWR from "swr";
 import Fetcher from "../api/Fetcher";
 function MostPopular() {
   const baseuri = process.env.NEXT_PUBLIC_BACKEND_URL;
-  console.log("baseuri:", baseuri);
   const { data, error } = useSWR(`${baseuri}/api/mostpopularpost`, Fetcher);
   if (error) {
     return <h1>failed to load</h1>;
@@ -26,12 +25,12 @@ function MostPopular() {
                 <a href="single-sidebar.html">
                   <img
                     src={`${baseuri}/` + "image/post/" + popular.image}
-                    alt="Genz"
+                    alt={popular.title}
                   />
                 </a>
               </div>
               <div className="card-info">
-                <div className="row">
+                {/* <div className="row">
                   <div className="col-7">
                     <a
                       className="color-gray-700 text-sm"
@@ -45,21 +44,39 @@ function MostPopular() {
                       3 mins read
                     </span>
                   </div>
-                </div>
+                </div> */}
                 <a href="single-sidebar.html">
-                  <h4 className="color-white mt-20">{popular.title}</h4>
+                  <h4 className="color-white mt-20">
+                    {" "}
+                    {popular.title.length > 70
+                      ? `${popular.title.slice(0, 70)}...`
+                      : popular.title}
+                  </h4>
                 </a>
                 <div className="row align-items-center mt-25">
                   <div className="col-7">
                     <div className="box-author">
                       <img
-                        src="assets/imgs/page/homepage1/author.jpg"
-                        alt="Genz"
+                        src={
+                          `${baseuri}/` +
+                          "storage/profile/" +
+                          popular.user.image
+                        }
+                        alt={popular.title}
                       />
                       <div className="author-info">
-                        <h6 className="color-gray-700">Joseph</h6>
+                        <h6 className="color-gray-700">
+                          {popular.user ? popular.user.name : "Unknown"}
+                        </h6>
                         <span className="color-gray-700 text-sm">
-                          25 April 2022
+                          {new Date(popular.created_at).toLocaleDateString(
+                            "en-US",
+                            {
+                              day: "numeric",
+                              month: "long",
+                              year: "numeric",
+                            }
+                          )}
                         </span>
                       </div>
                     </div>
