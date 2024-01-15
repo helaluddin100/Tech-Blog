@@ -1,5 +1,6 @@
 import React from "react";
 import useSWR from "swr";
+import Link from "next/link";
 import Fetcher from "../api/Fetcher";
 function MostPopular() {
   const baseuri = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -22,12 +23,14 @@ function MostPopular() {
             <div className="card-blog-1 hover-up">
               <div className="card-image mb-20">
                 <a className="post-type" href="blog-archive.html"></a>
-                <a href="single-sidebar.html">
-                  <img
-                    src={`${baseuri}/` + "image/post/" + popular.image}
-                    alt={popular.title}
-                  />
-                </a>
+                <Link href={`/${popular.slug}`}>
+                  <a>
+                    <img
+                      src={`${baseuri}/` + "image/post/" + popular.image}
+                      alt={popular.title}
+                    />
+                  </a>
+                </Link>
               </div>
               <div className="card-info">
                 {/* <div className="row">
@@ -45,14 +48,14 @@ function MostPopular() {
                     </span>
                   </div>
                 </div> */}
-                <a href="single-sidebar.html">
+                <Link href={`/${popular.slug}`}>
                   <h4 className="color-white mt-20">
-                    {" "}
                     {popular.title.length > 70
                       ? `${popular.title.slice(0, 70)}...`
                       : popular.title}
                   </h4>
-                </a>
+                </Link>
+
                 <div className="row align-items-center mt-25">
                   <div className="col-7">
                     <div className="box-author">
@@ -82,12 +85,11 @@ function MostPopular() {
                     </div>
                   </div>
                   <div className="col-5 text-end">
-                    <a
-                      className="readmore color-gray-500 text-sm"
-                      href="single-sidebar.html"
-                    >
-                      <span>Read more</span>
-                    </a>
+                    <Link href={`/${popular.slug}`}>
+                      <a className="readmore color-gray-500 text-sm">
+                        <span>Read more</span>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
