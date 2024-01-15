@@ -22,7 +22,6 @@ function MostPopular() {
           >
             <div className="card-blog-1 hover-up">
               <div className="card-image mb-20">
-                <a className="post-type" href="blog-archive.html"></a>
                 <Link href={`/${popular.slug}`}>
                   <a>
                     <img
@@ -98,10 +97,12 @@ function MostPopular() {
         ))}
       </div>
       <div className="text-center">
-        <a className="btn btn-linear btn-load-more wow animate__animated animate__zoomIn">
-          Show More Posts
-          <i className="fi-rr-arrow-small-right"></i>
-        </a>
+        <Link href={"Allpost"}>
+          <a className="btn btn-linear btn-load-more">
+            Show More Posts
+            <i className="fi-rr-arrow-small-right"></i>
+          </a>
+        </Link>
       </div>
     </div>
   );

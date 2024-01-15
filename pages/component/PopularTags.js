@@ -1,7 +1,7 @@
 // Your Next.js component or page
 
 import useSWR from "swr";
-
+import Link from "next/link";
 const baseuri = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -28,13 +28,14 @@ const PopularTags = () => {
         </div>
         <div class="content-sidebar pb-20">
           {popularTags.map((tag) => (
-            <a
-              key={tag.id}
-              class="btn btn-tags bg-gray-850 border-gray-800 mr-10 mb-10 bdrd16 "
-              href="blog-archive.html"
-            >
-              {tag.name} Posts: {tag.posts_count}
-            </a>
+            <Link href={`/tag/${tag.slug}`}>
+              <a
+                key={tag.id}
+                class="btn btn-tags bg-gray-850 border-gray-800 mr-10 mb-10 bdrd16 "
+              >
+                {tag.name} Posts: {tag.posts_count}
+              </a>
+            </Link>
           ))}
         </div>
       </div>

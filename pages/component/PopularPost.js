@@ -3,6 +3,7 @@ import useSWR from "swr";
 import Fetcher from "../api/Fetcher";
 import PopularCategories from "./PopularCategory";
 import PopularTags from "./PopularTags";
+import Link from "next/link";
 function PopularPost() {
   //Popular post
   const baseuri = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -30,21 +31,27 @@ function PopularPost() {
                   key={popularpost.id}
                 >
                   <div className="image-post">
-                    <a href="single-sidebar.html">
-                      <img
-                        src={`${baseuri}/` + "image/post/" + popularpost.image}
-                        alt={popularpost.title}
-                      />
-                    </a>
+                    <Link href={`/${popularpost.slug}`}>
+                      <a>
+                        <img
+                          src={
+                            `${baseuri}/` + "image/post/" + popularpost.image
+                          }
+                          alt={popularpost.title}
+                        />
+                      </a>
+                    </Link>
                   </div>
                   <div className="info-post border-gray-800">
-                    <a href="single-sidebar.html">
-                      <h6 className="color-white">
-                        {popularpost.title.length > 40
-                          ? `${popularpost.title.slice(0, 40)}...`
-                          : popularpost.title}
-                      </h6>
-                    </a>
+                    <Link href={`/${popularpost.slug}`}>
+                      <a>
+                        <h6 className="color-white">
+                          {popularpost.title.length > 40
+                            ? `${popularpost.title.slice(0, 40)}...`
+                            : popularpost.title}
+                        </h6>
+                      </a>
+                    </Link>
                     {/* <span className="color-gray-700">15 mins read</span> */}
                     <ul className="d-inline-block">
                       <li className="color-gray-700">

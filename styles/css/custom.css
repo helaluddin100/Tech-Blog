@@ -5,3 +5,8 @@
 .info-cat a {
   font-size: 16px;
 }
+
+.content-detail p {
+  font-size: 16px;
+  line-height: 165%;
+}

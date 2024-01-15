@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useSWR from "swr";
 import Fetcher from "../api/Fetcher";
+import Link from "next/link";
 const PopularCategories = () => {
   const baseuri = process.env.NEXT_PUBLIC_BACKEND_URL;
 
@@ -31,20 +32,19 @@ const PopularCategories = () => {
               <div className="item-cats border-gray-800 ">
                 <div className="cat-left">
                   <div className="image-cat">
-                    <a href="blog-archive.html">
-                      <img
-                        src={`${baseuri}/` + "image/" + category.image}
-                        alt={category.name}
-                      />
-                    </a>
+                    <Link href={`/category/${category.slug}`}>
+                      <a>
+                        <img
+                          src={`${baseuri}/` + "image/" + category.image}
+                          alt={category.name}
+                        />
+                      </a>
+                    </Link>
                   </div>
                   <div className="info-cat">
-                    <a
-                      className="color-gray-500 text-xl"
-                      href="blog-archive.html"
-                    >
-                      {category.name}
-                    </a>
+                    <Link href={`/category/${category.slug}`}>
+                      <a className="color-gray-500 text-xl">{category.name}</a>
+                    </Link>
                   </div>
                 </div>
                 <div className="cat-right">

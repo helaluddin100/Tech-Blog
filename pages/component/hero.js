@@ -1,7 +1,7 @@
 import React from "react";
 import useSWR from "swr";
 import Fetcher from "../api/Fetcher";
-
+import Link from "next/link";
 function hero() {
   const baseuri = process.env.NEXT_PUBLIC_BACKEND_URL;
   console.log("baseuri:", baseuri);
@@ -35,17 +35,19 @@ function hero() {
                   data-wow-delay="0s"
                 >
                   <div className="card-image">
-                    <a href="blog-archive.html">
-                      <img
-                        src={`${baseuri}/` + "image/" + category.image}
-                        alt={category.name}
-                      />
-                    </a>
+                    <Link href={`/category/${category.slug}`}>
+                      <a>
+                        <img
+                          src={`${baseuri}/` + "image/" + category.image}
+                          alt={category.name}
+                        />
+                      </a>
+                    </Link>
                   </div>
                   <div className="card-info">
-                    <a className="color-gray-500" href="blog-archive.html">
-                      {category.name}
-                    </a>
+                    <Link href={`/category/${category.slug}`}>
+                      <a className="color-gray-500">{category.name}</a>
+                    </Link>
                   </div>
                 </div>
               </li>
