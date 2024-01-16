@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-
+import { useRouter } from "next/router";
 function Header() {
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
 
@@ -34,6 +34,17 @@ function Header() {
 
   const toggleMobile = () => {
     setToggleMobileMenu(!toggleMobileMenu);
+  };
+
+  // =========search function ===========
+  const [query, setQuery] = useState("");
+  const router = useRouter();
+
+  const handleSearch = (e) => {
+    setFormSearchVisible(!formSearchVisible);
+    e.preventDefault();
+    router.push(`/searchresult?query=${encodeURIComponent(query)}`);
+    setQuery("");
   };
   return (
     <>
@@ -106,11 +117,13 @@ function Header() {
                 className="form-search p-20"
                 style={{ display: formSearchVisible ? "block" : "none" }}
               >
-                <form action="#">
+                <form onSubmit={handleSearch}>
                   <input
                     className="form-control"
                     type="text"
                     placeholder="Search"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
                   />
                   <input className="btn-search-2" type="submit" value="" />
                 </form>

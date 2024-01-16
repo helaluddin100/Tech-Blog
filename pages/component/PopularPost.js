@@ -13,7 +13,20 @@ function PopularPost() {
     return <h1>failed to load</h1>;
   }
   if (!data) {
-    return <div>loading...</div>;
+    return (
+      <div className="preloader d-flex align-items-center justify-content-center">
+        <div className="preloader-inner position-relative">
+          <div className="text-center">
+            <img
+              className="mb-10"
+              src="assets/imgs/template/favicon.svg"
+              alt="GenZ"
+            />
+            <div className="preloader-dots"></div>
+          </div>
+        </div>
+      </div>
+    );
   }
   return (
     <div className="col-lg-4">
@@ -31,7 +44,7 @@ function PopularPost() {
                   key={popularpost.id}
                 >
                   <div className="image-post">
-                    <Link href={`/${popularpost.slug}`}>
+                    <Link href={`post/${popularpost.slug}`}>
                       <a>
                         <img
                           src={
@@ -43,7 +56,7 @@ function PopularPost() {
                     </Link>
                   </div>
                   <div className="info-post border-gray-800">
-                    <Link href={`/${popularpost.slug}`}>
+                    <Link href={`post/${popularpost.slug}`}>
                       <a>
                         <h6 className="color-white">
                           {popularpost.title.length > 40

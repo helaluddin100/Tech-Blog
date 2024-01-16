@@ -16,8 +16,25 @@ const PopularTags = () => {
     return <h1>Failed to load</h1>;
   }
 
+  // if (!popularTags) {
+  //   return <div>Loading...</div>;
+  // }
+
   if (!popularTags) {
-    return <div>Loading...</div>;
+    return (
+      <div className="preloader d-flex align-items-center justify-content-center">
+        <div className="preloader-inner position-relative">
+          <div className="text-center">
+            <img
+              className="mb-10"
+              src="assets/imgs/template/favicon.svg"
+              alt="GenZ"
+            />
+            <div className="preloader-dots"></div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (

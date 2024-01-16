@@ -15,7 +15,22 @@ const PostsByTagPage = () => {
   );
   console.log(data);
   if (error) return <div>Error loading posts</div>;
-  if (!data) return <div>Loading...</div>;
+  if (!data) {
+    return (
+      <div className="preloader d-flex align-items-center justify-content-center">
+        <div className="preloader-inner position-relative">
+          <div className="text-center">
+            <img
+              className="mb-10"
+              src="assets/imgs/template/favicon.svg"
+              alt="GenZ"
+            />
+            <div className="preloader-dots"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
   const { tag, posts } = data;
   return (
     <div>
@@ -65,7 +80,7 @@ const PostsByTagPage = () => {
                       <div class="col-lg-4" key={post.id}>
                         <div class="card-blog-1 hover-up wow animate__animated animate__fadeIn">
                           <div class="card-image mb-20">
-                            <Link href={`/${post.slug}`}>
+                            <Link href={`/post/${post.slug}`}>
                               <a>
                                 <img
                                   src={
@@ -77,7 +92,7 @@ const PostsByTagPage = () => {
                             </Link>
                           </div>
                           <div class="card-info">
-                            <Link href={`/${post.slug}`}>
+                            <Link href={`/post/${post.slug}`}>
                               <a>
                                 <h5 class="color-white mt-20">
                                   {post.title.length > 50
@@ -114,7 +129,7 @@ const PostsByTagPage = () => {
                                 </div>
                               </div>
                               <div class="col-5 text-end">
-                                <Link href={`/${post.slug}`}>
+                                <Link href={`/post/${post.slug}`}>
                                   <a class="readmore color-gray-500 text-sm">
                                     <span>Read more</span>
                                   </a>

@@ -201,15 +201,6 @@ function Footer() {
           </div>
         </div>
       </footer>
-      <div className="progressCounter progressScroll hover-up hover-neon-2">
-        <div className="progressScroll-border">
-          <div className="progressScroll-circle">
-            <span className="progressScroll-text">
-              <i className="fi-rr-arrow-small-up"></i>
-            </span>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

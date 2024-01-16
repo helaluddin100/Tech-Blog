@@ -9,7 +9,20 @@ function MostPopular() {
     return <h1>failed to load</h1>;
   }
   if (!data) {
-    return <div>loading...</div>;
+    return (
+      <div className="preloader d-flex align-items-center justify-content-center">
+        <div className="preloader-inner position-relative">
+          <div className="text-center">
+            <img
+              className="mb-10"
+              src="assets/imgs/template/favicon.svg"
+              alt="GenZ"
+            />
+            <div className="preloader-dots"></div>
+          </div>
+        </div>
+      </div>
+    );
   }
   return (
     <div>
@@ -22,7 +35,7 @@ function MostPopular() {
           >
             <div className="card-blog-1 hover-up">
               <div className="card-image mb-20">
-                <Link href={`/${popular.slug}`}>
+                <Link href={`post/${popular.slug}`}>
                   <a>
                     <img
                       src={`${baseuri}/` + "image/post/" + popular.image}
@@ -47,7 +60,7 @@ function MostPopular() {
                     </span>
                   </div>
                 </div> */}
-                <Link href={`/${popular.slug}`}>
+                <Link href={`post/${popular.slug}`}>
                   <h4 className="color-white mt-20">
                     {popular.title.length > 70
                       ? `${popular.title.slice(0, 70)}...`
@@ -84,7 +97,7 @@ function MostPopular() {
                     </div>
                   </div>
                   <div className="col-5 text-end">
-                    <Link href={`/${popular.slug}`}>
+                    <Link href={`post/${popular.slug}`}>
                       <a className="readmore color-gray-500 text-sm">
                         <span>Read more</span>
                       </a>

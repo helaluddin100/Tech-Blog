@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import AppLayout from "../component/Layout/Layout";
+import AppLayout from "../../component/Layout/Layout";
 import Head from "next/head";
-import PopularPost from "./component/PopularPost";
+import PopularPost from "../component/PopularPost";
 import Link from "next/link";
 const SinglePost = () => {
   const router = useRouter();
@@ -27,7 +27,20 @@ const SinglePost = () => {
   }, [slug]);
 
   if (!postData) {
-    return <p>Loading...</p>;
+    return (
+      <div className="preloader d-flex align-items-center justify-content-center">
+        <div className="preloader-inner position-relative">
+          <div className="text-center">
+            <img
+              className="mb-10"
+              src="assets/imgs/template/favicon.svg"
+              alt="GenZ"
+            />
+            <div className="preloader-dots"></div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -134,13 +147,14 @@ const SinglePost = () => {
                     {postData.tags && (
                       <div class="box-tags">
                         {postData.tags.map((tag) => (
-                          <a
-                            key={tag.id}
-                            class="btn btn-tags bg-gray-850 border-gray-800 mr-10 hover-up"
-                            href="blog-archive.html"
-                          >
-                            #{tag.name}
-                          </a>
+                          <Link href={`/tag/${tag.slug}`}>
+                            <a
+                              key={tag.id}
+                              class="btn btn-tags bg-gray-850 border-gray-800 mr-10 hover-up"
+                            >
+                              #{tag.name}
+                            </a>
+                          </Link>
                         ))}
                       </div>
                     )}
