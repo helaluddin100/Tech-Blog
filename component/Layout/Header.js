@@ -56,18 +56,20 @@ function Header() {
         <div className="container">
           <div className="main-header">
             <div className="header-logo">
-              <a className="d-flex" href="">
-                <img
-                  className="logo-night"
-                  alt="GenZ"
-                  src="assets/imgs/template/logo.svg"
-                />
-                <img
-                  className="d-none logo-day"
-                  alt="GenZ"
-                  src="assets/imgs/template/logo-day.svg"
-                />
-              </a>
+              <Link href={"/"}>
+                <a className="d-flex">
+                  <img
+                    className="logo-night"
+                    alt="GenZ"
+                    src="assets/imgs/template/logo.svg"
+                  />
+                  <img
+                    className="d-none logo-day"
+                    alt="GenZ"
+                    src="assets/imgs/template/logo-day.svg"
+                  />
+                </a>
+              </Link>
             </div>
             <div className="header-nav">
               <nav className="nav-main-menu d-none d-xl-block">
@@ -164,18 +166,20 @@ function Header() {
         <div className="mobile-header-wrapper-inner">
           <div className="mobile-header-content-area">
             <div className="mobile-logo border-gray-800">
-              <a className="d-flex" href="">
-                <img
-                  className="logo-night"
-                  alt="GenZ"
-                  src="assets/imgs/template/logo.svg"
-                />
-                <img
-                  className="d-none logo-day"
-                  alt="GenZ"
-                  src="assets/imgs/template/logo-day.svg"
-                />
-              </a>
+              <Link href={"/"}>
+                <a className="d-flex">
+                  <img
+                    className="logo-night"
+                    alt="GenZ"
+                    src="assets/imgs/template/logo.svg"
+                  />
+                  <img
+                    className="d-none logo-day"
+                    alt="GenZ"
+                    src="assets/imgs/template/logo-day.svg"
+                  />
+                </a>
+              </Link>
             </div>
             <div className="perfect-scroll">
               <div className="mobile-menu-wrap mobile-header-border">
@@ -198,51 +202,6 @@ function Header() {
                     </li>
                   </ul>
                 </nav>
-              </div>
-              <div className="mobile-account border-gray-800">
-                <div className="mobile-header-top bg-gray-900">
-                  <div className="user-account">
-                    <a href="page-login.html">
-                      <img src="assets/imgs/template/ava.jpg" alt="GenZ" />
-                    </a>
-                    <div className="content">
-                      <h6 className="user-name color-white">
-                        Hello<span className="color-white"> Steven !</span>
-                      </h6>
-                      <p className="font-xs text-muted">
-                        You have 3 new messages
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <ul className="mobile-menu">
-                  <li>
-                    <a href="page-login.html">Profile</a>
-                  </li>
-                  <li>
-                    <a href="page-login.html">Articles Saved</a>
-                  </li>
-                  <li>
-                    <a href="page-login.html">Add new post</a>
-                  </li>
-                  <li>
-                    <a href="page-login.html">My Likes</a>
-                  </li>
-                  <li>
-                    <a href="page-login.html">Account Setting</a>
-                  </li>
-                  <li>
-                    <a href="page-login.html">Sign out</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="site-copyright color-gray-400 mt-30">
-                Copyright 2023 &copy; Genz - Personal Blog Template.
-                <br />
-                Designed by
-                <a href="http://alithemes.com" target="_blank">
-                  &nbsp; AliThemes
-                </a>
               </div>
             </div>
           </div>
