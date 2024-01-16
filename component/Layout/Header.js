@@ -1,7 +1,13 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import useSWR from "swr";
+
+const fetcher = (url) => fetch(url).then((res) => res.json());
+
 function Header() {
+  const baseuri = process.env.NEXT_PUBLIC_BACKEND_URL;
+
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
 
   useEffect(() => {
@@ -46,6 +52,34 @@ function Header() {
     router.push(`/searchresult?query=${encodeURIComponent(query)}`);
     setQuery("");
   };
+
+  // ============popular tag ===========
+  const { data: popularTags, error } = useSWR(
+    `${baseuri}/api/popular-tags`,
+    fetcher
+  );
+
+  if (error) {
+    return <h1>Failed to load</h1>;
+  }
+
+  if (!popularTags) {
+    return (
+      <div className="preloader d-flex align-items-center justify-content-center">
+        <div className="preloader-inner position-relative">
+          <div className="text-center">
+            <img
+              className="mb-10"
+              src="assets/imgs/template/favicon.svg"
+              alt="GenZ"
+            />
+            <div className="preloader-dots"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
       <header
@@ -131,21 +165,13 @@ function Header() {
                 </form>
                 <div className="popular-keywords text-start mt-20">
                   <p className="mb-10 color-white">Popular tags:</p>
-                  <a className="color-gray-600 mr-10 font-xs" href="#">
-                    # Travel,
-                  </a>
-                  <a className="color-gray-600 mr-10 font-xs" href="#">
-                    # Tech,
-                  </a>
-                  <a className="color-gray-600 mr-10 font-xs" href="#">
-                    # Movie
-                  </a>
-                  <a className="color-gray-600 mr-10 font-xs" href="#">
-                    # Lifestyle
-                  </a>
-                  <a className="color-gray-600 mr-10 font-xs" href="#">
-                    # Sport
-                  </a>
+                  {popularTags.map((tag) => (
+                    <Link key={tag.slug} href={`/tag/${tag.slug}`}>
+                      <a className="color-gray-600 mr-10 font-xs">
+                        #{tag.name}
+                      </a>
+                    </Link>
+                  ))}
                 </div>
               </div>
               <a

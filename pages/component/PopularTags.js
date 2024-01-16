@@ -1,5 +1,3 @@
-// Your Next.js component or page
-
 import useSWR from "swr";
 import Link from "next/link";
 const baseuri = process.env.NEXT_PUBLIC_BACKEND_URL;
@@ -15,10 +13,6 @@ const PopularTags = () => {
   if (error) {
     return <h1>Failed to load</h1>;
   }
-
-  // if (!popularTags) {
-  //   return <div>Loading...</div>;
-  // }
 
   if (!popularTags) {
     return (
