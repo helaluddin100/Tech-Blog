@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Subscriber from "../../pages/component/Subscriber";
 
 function Footer() {
   return (
@@ -119,28 +120,7 @@ function Footer() {
                   us, case studies, and industry news.
                 </p>
                 <div className="form-newsletters mt-15 wow animate__animated animate__fadeInUp">
-                  <form action="#">
-                    <div className="form-group">
-                      <input
-                        className="input-name border-gray-500"
-                        type="text"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        className="input-email border-gray-500"
-                        type="email"
-                        placeholder="Emaill address"
-                      />
-                    </div>
-                    <div className="form-group mt-20">
-                      <button className="btn btn-linear hover-up">
-                        Subscribe
-                        <i className="fi-rr-arrow-small-right"></i>
-                      </button>
-                    </div>
-                  </form>
+                  <Subscriber />
                 </div>
               </div>
             </div>
