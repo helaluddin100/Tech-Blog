@@ -70,8 +70,8 @@ function Header() {
           <div className="text-center">
             <img
               className="mb-10"
-              src="assets/imgs/template/favicon.svg"
-              alt="GenZ"
+              src="/assets/imgs/template/favicon.svg"
+              alt="Bits Of Dev"
             />
             <div className="preloader-dots"></div>
           </div>
@@ -94,13 +94,13 @@ function Header() {
                 <a className="d-flex">
                   <img
                     className="logo-night"
-                    alt="GenZ"
-                    src="assets/imgs/template/logo.svg"
+                    alt="Bits Of Dev"
+                    src="/assets/imgs/template/logo.svg"
                   />
                   <img
                     className="d-none logo-day"
-                    alt="GenZ"
-                    src="assets/imgs/template/logo-day.svg"
+                    alt="Bits Of Dev"
+                    src="/assets/imgs/template/logo-day.svg"
                   />
                 </a>
               </Link>
@@ -174,12 +174,12 @@ function Header() {
                   ))}
                 </div>
               </div>
-              <a
+              {/* <a
                 className="btn btn-linear d-none d-sm-inline-block hover-up hover-shadow"
                 href="page-login.html"
               >
                 Subscribe
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -196,13 +196,13 @@ function Header() {
                 <a className="d-flex">
                   <img
                     className="logo-night"
-                    alt="GenZ"
-                    src="assets/imgs/template/logo.svg"
+                    alt="Bits Of Dev"
+                    src="/assets/imgs/template/logo.svg"
                   />
                   <img
                     className="d-none logo-day"
-                    alt="GenZ"
-                    src="assets/imgs/template/logo-day.svg"
+                    alt="Bits Of Dev"
+                    src="/assets/imgs/template/logo-day.svg"
                   />
                 </a>
               </Link>

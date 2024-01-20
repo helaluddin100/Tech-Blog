@@ -33,8 +33,8 @@ const SinglePost = () => {
           <div className="text-center">
             <img
               className="mb-10"
-              src="assets/imgs/template/favicon.svg"
-              alt="GenZ"
+              src="/assets/imgs/template/favicon.svg"
+              alt="Bits Of Dev"
             />
             <div className="preloader-dots"></div>
           </div>
@@ -112,7 +112,9 @@ const SinglePost = () => {
                             }
                           )}
                         </span>
-                        {/* <span class="color-gray-700 text-sm">3 mins to read</span> */}
+                        <span class="color-gray-700 text-sm">
+                          {postData.view_count} Views this post
+                        </span>
                       </div>
                     </div>
                   </div>

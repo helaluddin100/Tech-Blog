@@ -26,8 +26,8 @@ const PopularCategories = () => {
           <div className="text-center">
             <img
               className="mb-10"
-              src="assets/imgs/template/favicon.svg"
-              alt="GenZ"
+              src="/assets/imgs/template/favicon.svg"
+              alt="Bits Of Dev"
             />
             <div className="preloader-dots"></div>
           </div>

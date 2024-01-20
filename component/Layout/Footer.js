@@ -13,13 +13,13 @@ function Footer() {
                 <a className="wow animate__animated animate__fadeInUp" href="">
                   <img
                     className="logo-night"
-                    src="assets/imgs/template/logo.svg"
-                    alt="Genz"
+                    src="/assets/imgs/template/logo.svg"
+                    alt="Bits Of Dev"
                   />
                   <img
                     className="d-none logo-day"
-                    alt="GenZ"
-                    src="assets/imgs/template/logo-day.svg"
+                    alt="Bits Of Dev"
+                    src="/assets/imgs/template/logo-day.svg"
                   />
                 </a>
                 <p className="mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp">
@@ -131,11 +131,10 @@ function Footer() {
                     © Created by
                     <a
                       className="copyright"
-                      href="http://alithemes.com"
+                      href="https://bitsofdev.com"
                       target="_blank"
                     >
-                      {" "}
-                      AliThemes.com
+                      Bitsofdev.com
                     </a>
                   </p>
                 </div>

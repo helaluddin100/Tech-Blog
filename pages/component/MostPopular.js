@@ -15,8 +15,8 @@ function MostPopular() {
           <div className="text-center">
             <img
               className="mb-10"
-              src="assets/imgs/template/favicon.svg"
-              alt="GenZ"
+              src="/assets/imgs/template/favicon.svg"
+              alt="Bits Of Dev"
             />
             <div className="preloader-dots"></div>
           </div>
@@ -62,8 +62,8 @@ function MostPopular() {
                 </div> */}
                 <Link href={`post/${popular.slug}`}>
                   <h4 className="color-white mt-20">
-                    {popular.title.length > 70
-                      ? `${popular.title.slice(0, 70)}...`
+                    {popular.title.length > 60
+                      ? `${popular.title.slice(0, 60)}...`
                       : popular.title}
                   </h4>
                 </Link>

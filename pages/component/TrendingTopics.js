@@ -21,8 +21,8 @@ function TrendingTopics() {
                         <a href="blog-archive.html">
                           <div className="card-image">
                             <img
-                              src="assets/imgs/page/homepage1/sport.png"
-                              alt="Genz"
+                              src="/assets/imgs/page/homepage1/sport.png"
+                              alt="Bits Of Dev"
                             />
                             <div className="card-info">
                               <div className="info-bottom">
@@ -41,8 +41,8 @@ function TrendingTopics() {
                         <a href="blog-archive.html">
                           <div className="card-image">
                             <img
-                              src="assets/imgs/page/homepage1/travel.png"
-                              alt="Genz"
+                              src="/assets/imgs/page/homepage1/travel.png"
+                              alt="Bits Of Dev"
                             />
                             <div className="card-info">
                               <div className="info-bottom">
@@ -61,8 +61,8 @@ function TrendingTopics() {
                         <a href="blog-archive.html">
                           <div className="card-image">
                             <img
-                              src="assets/imgs/page/homepage1/design.png"
-                              alt="Genz"
+                              src="/assets/imgs/page/homepage1/design.png"
+                              alt="Bits Of Dev"
                             />
                             <div className="card-info">
                               <div className="info-bottom">
@@ -81,8 +81,8 @@ function TrendingTopics() {
                         <a href="blog-archive.html">
                           <div className="card-image">
                             <img
-                              src="assets/imgs/page/homepage1/movie.png"
-                              alt="Genz"
+                              src="/assets/imgs/page/homepage1/movie.png"
+                              alt="Bits Of Dev"
                             />
                             <div className="card-info">
                               <div className="info-bottom">
@@ -101,8 +101,8 @@ function TrendingTopics() {
                         <a href="blog-archive.html">
                           <div className="card-image">
                             <img
-                              src="assets/imgs/page/homepage1/lifestyle.png"
-                              alt="Genz"
+                              src="/assets/imgs/page/homepage1/lifestyle.png"
+                              alt="Bits Of Dev"
                             />
                             <div className="card-info">
                               <div className="info-bottom">
@@ -121,8 +121,8 @@ function TrendingTopics() {
                         <a href="blog-archive.html">
                           <div className="card-image">
                             <img
-                              src="assets/imgs/page/homepage2/lifestyle.png"
-                              alt="Genz"
+                              src="/assets/imgs/page/homepage2/lifestyle.png"
+                              alt="Bits Of Dev"
                             />
                             <div className="card-info">
                               <div className="info-bottom">
