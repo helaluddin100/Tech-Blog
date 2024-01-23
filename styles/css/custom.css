@@ -14,3 +14,85 @@
 .card-info h4 {
     cursor: pointer;
 }
+img.logo-night {
+    width: 50px;
+}
+.contact-us-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+.contact-us-header h1{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;
+}
+.input-fuild-item{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.input-fuild-item label{
+    font-size: 18px;
+}
+
+.input-fuild-item .form-control{
+    background: none;
+    padding: 12px 20px;
+}
+.section-title {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+h2.sec-title:before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 40%;
+    background: linear-gradient(90deg,#4355b4,#fa00ff);
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    left: 29%;
+}
+.terms-conditions {
+    padding: 100px 0;
+}
+h2.pp-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.urbanist-black-16 {
+    font-weight: 500;
+    font-size: 16px;
+}
+@media screen and (max-width: 992px) {
+    .contact-us-header h1{
+        font-size: 30px;
+    }
+    .contact-us-header{
+        width: 90%;
+        padding-bottom: 40px;
+    }
+    .section-title {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    .section-title h2{
+        font-size: 40px;
+        margin-bottom: 20px !important;
+    }
+    
+}

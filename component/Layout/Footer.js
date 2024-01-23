@@ -10,7 +10,8 @@ function Footer() {
           <div className="footer-1 bg-gray-850 border-gray-800">
             <div className="row">
               <div className="col-lg-4 mb-30">
-                <a className="wow animate__animated animate__fadeInUp" href="">
+      <Link href={'/'}>
+      <div className="wow animate__animated animate__fadeInUp" >
                   <img
                     className="logo-night"
                     src="/assets/imgs/template/logo.svg"
@@ -21,13 +22,9 @@ function Footer() {
                     alt="Bits Of Dev"
                     src="/assets/imgs/template/logo-day.svg"
                   />
-                </a>
-                <p className="mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp">
-                  When an unknown prnoto sans took a galley and scrambled it to
-                  make specimen book not only five When an unknown prnoto sans
-                  took a galley and scrambled it to five centurie.
-                </p>
-                <h6 className="color-white mb-5 wow animate__animated animate__fadeInUp">
+                </div>
+      </Link>
+                <h6 className="color-white mb-5 mt-15 wow animate__animated animate__fadeInUp">
                   Address
                 </h6>
                 <p className="text-sm color-gray-500 wow animate__animated animate__fadeInUp">
@@ -37,11 +34,12 @@ function Footer() {
                 </p>
               </div>
               <div className="col-lg-4 mb-30">
-                <h6 className="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">
-                  Categories
-                </h6>
+
                 <div className="row">
                   <div className="col-6">
+                    <h6 className="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">
+                      Categories
+                    </h6>
                     <ul className="menu-footer">
                       <li className="wow animate__animated animate__fadeInUp">
                         <a className="color-gray-500" href="blog-archive.html">
@@ -76,35 +74,34 @@ function Footer() {
                     </ul>
                   </div>
                   <div className="col-6">
+                    <h6 className="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">
+                      Pages   
+                    </h6>
                     <ul className="menu-footer">
                       <li className="wow animate__animated animate__fadeInUp">
-                        <a className="color-gray-500" href="blog-archive.html">
-                          Animal
+                        <a className="color-gray-500" href="/contact-us">
+                          Contact Us
                         </a>
                       </li>
                       <li className="wow animate__animated animate__fadeInUp">
-                        <a className="color-gray-500" href="blog-archive.html">
-                          Dental
+                        <a className="color-gray-500" href="/about">
+                        About
                         </a>
                       </li>
                       <li className="wow animate__animated animate__fadeInUp">
-                        <a className="color-gray-500" href="blog-archive.html">
-                          Biology
+                        <a className="color-gray-500" href="/terms-of-service">
+                          Terms of service
                         </a>
                       </li>
                       <li className="wow animate__animated animate__fadeInUp">
-                        <a className="color-gray-500" href="blog-archive.html">
-                          Design
+                        <a className="color-gray-500" href="/privacy-policy">
+                          Privacy Policy
                         </a>
                       </li>
+                    
                       <li className="wow animate__animated animate__fadeInUp">
-                        <a className="color-gray-500" href="blog-archive.html">
-                          Breakfast
-                        </a>
-                      </li>
-                      <li className="wow animate__animated animate__fadeInUp">
-                        <a className="color-gray-500" href="blog-archive.html">
-                          Dessert
+                        <a className="color-gray-500" href="/cookie-policy">
+                        Cookie Policy
                         </a>
                       </li>
                     </ul>
@@ -128,13 +125,13 @@ function Footer() {
               <div className="row">
                 <div className="col-lg-5 text-center text-lg-start">
                   <p className="text-base color-white wow animate__animated animate__fadeIn">
-                    © Created by
+                    © Created by 
                     <a
                       className="copyright"
                       href="https://bitsofdev.com"
                       target="_blank"
                     >
-                      Bitsofdev.com
+                      {' '} Bitsofdev.com
                     </a>
                   </p>
                 </div>

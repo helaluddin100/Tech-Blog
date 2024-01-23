@@ -736,23 +736,6 @@ h6 {
   text-align: right;
 }
 
-.support {
-  background: url(../../public/assets/imgs/page/contact/headset.svg) no-repeat
-    left center;
-  padding: 10px 30px 10px 50px;
-}
-
-.location {
-  background: url(../../public/assets/imgs/page/contact/marker.svg) no-repeat
-    left center;
-  padding: 10px 30px 10px 50px;
-}
-
-.plane {
-  background: url(../../public/assets/imgs/page/contact/paper-plane.svg)
-    no-repeat left center;
-  padding: 10px 30px 10px 50px;
-}
 
 .form-group {
   margin-bottom: 24px;
@@ -1073,8 +1056,8 @@ body {
   color: #94a9c9;
   background-color: #0f172a;
   font-family: "Noto Sans", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 17px;
+  line-height: 150%;
   font-style: normal;
   font-weight: 400;
   position: relative;
@@ -1117,9 +1100,9 @@ a.text-brand-3:hover {
 
 .btn {
   border-radius: 6px;
-  padding: 10px 16px;
+  padding: 12px 16px;
   font-family: "Noto Sans", sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 20px;
   font-weight: 700;
   text-decoration: none;
@@ -1864,13 +1847,6 @@ input {
   position: relative;
   background-position: bottom right;
 }
-
-.card-pricing:hover {
-  border-color: #66768f !important;
-  background: url(../../public/assets/imgs/page/about/shadow-1.svg) no-repeat
-    bottom right;
-}
-
 .card-pricing .lbl-danger {
   border-radius: 16px;
   padding: 5px 15px;
@@ -1894,16 +1870,6 @@ input {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   margin-bottom: 30px;
-}
-
-.card-testimonials {
-  position: relative;
-  background: url(../../public/assets/imgs/page/about/quote.svg) no-repeat
-    bottom right 15px;
-  padding: 30px 24px 50px 24px;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 16px;
 }
 
 @keyframes load7 {
@@ -3029,7 +2995,7 @@ input {
 .form-search {
   position: absolute;
   top: 100%;
-  right: 98px;
+  right: 25px;
   width: 100%;
   max-width: 350px;
   z-index: 1234;
@@ -6239,45 +6205,13 @@ iframe.google-map {
   margin-bottom: 15px;
 }
 
-.item-icon.icon-motion {
-  background: url(../../public/assets/imgs/page/about/motion.svg) no-repeat
-    center;
-}
 
-.item-icon.icon-ui {
-  background: url(../../public/assets/imgs/page/about/ui.svg) no-repeat center;
-}
 
-.item-icon.icon-branding {
-  background: url(../../public/assets/imgs/page/about/branding.svg) no-repeat
-    center;
-}
-
-.item-icon.icon-product {
-  background: url(../../public/assets/imgs/page/about/product.svg) no-repeat
-    center;
-}
-
-.item-icon.icon-key {
-  background: url(../../public/assets/imgs/page/about/key.svg) no-repeat center;
-}
-
-.item-icon.icon-social {
-  background: url(../../public/assets/imgs/page/about/social.svg) no-repeat
-    center;
-}
 
 .list-checked {
   padding: 0px 0px 0px 20px;
 }
 
-.list-checked li {
-  display: inline-block;
-  padding: 3px 0px 3px 25px;
-  margin: 0px 0px 15px 0px;
-  background: url(../../public/assets/imgs/page/about/checked.svg) no-repeat
-    left center;
-}
 
 .accordion-button {
   border: 0px;
@@ -6294,20 +6228,6 @@ iframe.google-map {
 
 .accordion-button:not(.collapsed) {
   background-color: transparent;
-}
-
-.accordion-button::after {
-  background-image: url(../../public/assets/imgs/page/about/open.svg);
-  height: 54px;
-  width: 54px;
-  background-size: auto;
-}
-
-.accordion-button:not(.collapsed)::after {
-  background-image: url(../../public/assets/imgs/page/about/close.svg);
-  height: 54px;
-  width: 54px;
-  background-size: auto;
 }
 
 .accordion-item {
