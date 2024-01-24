@@ -1780,6 +1780,7 @@ input {
   border-radius: 16px;
   align-items: center;
   margin-bottom: 30px;
+  justify-content:center;
 }
 
 .card-style-2 .card-image {
@@ -3315,6 +3316,29 @@ input {
   li.has-children.active {
   padding-bottom: 0;
 }
+.mobile-header-wrapper-style
+  .mobile-header-wrapper-inner
+  .mobile-header-content-area
+  .mobile-menu-wrap
+  nav
+  .mobile-menu
+  li
+  ul
+  li.has-children .sub-menu{
+    display: none;
+  }
+.mobile-header-wrapper-style
+  .mobile-header-wrapper-inner
+  .mobile-header-content-area
+  .mobile-menu-wrap
+  nav
+  .mobile-menu
+  li
+  ul
+  li.has-children.active .sub-menu{
+    display: block;
+  }
+
 
 .mobile-header-wrapper-style
   .mobile-header-wrapper-inner
@@ -3997,6 +4021,7 @@ input {
   display: block;
   padding: 0px 0px 0px 0px;
   transition-duration: 0.2s;
+  cursor: pointer;
 }
 
 .footer .menu-footer li a:hover {

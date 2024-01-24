@@ -1,13 +1,12 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 import useSWR from "swr";
+import Fetcher from "../../pages/api/Fetcher";
+import SearchPopularTags from "../../pages/component/SearchPopularTags";
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function Header() {
   const baseuri = process.env.NEXT_PUBLIC_BACKEND_URL;
-
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
 
   useEffect(() => {
@@ -27,12 +26,6 @@ function Header() {
     };
   }, []);
 
-  // =============toggle search box =============================
-  const [formSearchVisible, setFormSearchVisible] = useState(false);
-
-  const toggleFormSearch = () => {
-    setFormSearchVisible(!formSearchVisible);
-  };
 
   // ==============toggle mobile menu =========
 
@@ -42,28 +35,31 @@ function Header() {
     setToggleMobileMenu(!toggleMobileMenu);
   };
 
-  // =========search function ===========
-  const [query, setQuery] = useState("");
-  const router = useRouter();
 
-  const handleSearch = (e) => {
-    setFormSearchVisible(!formSearchVisible);
-    e.preventDefault();
-    router.push(`/searchresult?query=${encodeURIComponent(query)}`);
-    setQuery("");
+  // =========== toggle Mobile Submenu ============
+  const [toggleMobileSubMenu, setToggleMobileSubMenu] = useState(false);
+
+  const toggleSubMobile = () => {
+    setToggleMobileSubMenu(!toggleMobileSubMenu);
   };
-
-  // ============popular tag ===========
-  const { data: popularTags, error } = useSWR(
-    `${baseuri}/api/popular-tags`,
-    fetcher
+  // =============== Category ===========
+  const { data: allCategoryData, error: allCategoryError, isValidating } = useSWR(
+    `${baseuri}/api/allcategory`,
+    Fetcher
   );
 
-  if (error) {
-    return <h1>Failed to load</h1>;
+  // Check if data is still being fetched
+  if (isValidating) {
+    return (
+      <div className="preloader d-flex align-items-center justify-content-center">
+        {/* ... Your preloader JSX ... */}
+      </div>
+    );
   }
-
-  if (!popularTags) {
+  if (allCategoryError) {
+    return <h1>failed to load</h1>;
+  }
+  if (!allCategoryData) {
     return (
       <div className="preloader d-flex align-items-center justify-content-center">
         <div className="preloader-inner position-relative">
@@ -79,13 +75,11 @@ function Header() {
       </div>
     );
   }
-
   return (
     <>
       <header
-        className={`header sticky-bar bg-gray-900 ${
-          isNavbarFixed ? "stick bg-gray-850" : ""
-        }`}
+        className={`header sticky-bar bg-gray-900 ${isNavbarFixed ? "stick bg-gray-850" : ""
+          }`}
       >
         <div className="container">
           <div className="main-header">
@@ -119,23 +113,37 @@ function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link href={"/category"}>
+                    <Link href={"/Allpost"}>
                       <a className="color-gray-500" href="#">
-                        Category
+                        All Blogs
                       </a>
                     </Link>
                   </li>
+                  <li className="has-children">
+                    <a class="color-gray-500" href="/#">Category {" "}</a>
+                    <ul class="sub-menu two-col">
+                      {
+                        allCategoryData.map((category) => (
+                          <li key={category.id}>
+                            <Link href={`/category/${category.slug}`}>
+                              <a class="color-gray-500">{category.name}</a>
+                            </Link>
+                          </li>
+                        ))
+                      }
+
+                    </ul>
+                  </li>
                   <li>
-                    <Link href={"/contact"}>
-                      <a className="color-gray-500">Contact</a>
+                    <Link href={"/contact-us"}>
+                      <a className="color-gray-500">Contact Us</a>
                     </Link>
                   </li>
                 </ul>
               </nav>
               <div
-                className={`burger-icon burger-icon-white ${
-                  toggleMobileMenu ? "burger-close" : ""
-                }`}
+                className={`burger-icon burger-icon-white ${toggleMobileMenu ? "burger-close" : ""
+                  }`}
                 onClick={toggleMobile}
               >
                 <span className="burger-icon-top"></span>
@@ -143,51 +151,13 @@ function Header() {
                 <span className="burger-icon-bottom"></span>
               </div>
             </div>
-            <div className="header-right text-end">
-              <a
-                className="btn btn-search"
-                href="#"
-                onClick={toggleFormSearch}
-              ></a>
-              <div
-                className="form-search p-20"
-                style={{ display: formSearchVisible ? "block" : "none" }}
-              >
-                <form onSubmit={handleSearch}>
-                  <input
-                    className="form-control"
-                    type="text"
-                    placeholder="Search"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                  />
-                  <input className="btn-search-2" type="submit" value="" />
-                </form>
-                <div className="popular-keywords text-start mt-20">
-                  <p className="mb-10 color-white">Popular tags:</p>
-                  {popularTags.map((tag) => (
-                    <Link key={tag.slug} href={`/tag/${tag.slug}`}>
-                      <a className="color-gray-600 mr-10 font-xs">
-                        #{tag.name}
-                      </a>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-              {/* <a
-                className="btn btn-linear d-none d-sm-inline-block hover-up hover-shadow"
-                href="page-login.html"
-              >
-                Subscribe
-              </a> */}
-            </div>
+            <SearchPopularTags />
           </div>
         </div>
       </header>
       <div
-        className={`mobile-header-active mobile-header-wrapper-style perfect-scrollbar bg-gray-900 ${
-          toggleMobileMenu ? "sidebar-visible" : ""
-        }`}
+        className={`mobile-header-active mobile-header-wrapper-style perfect-scrollbar bg-gray-900 ${toggleMobileMenu ? "sidebar-visible" : ""
+          }`}
       >
         <div className="mobile-header-wrapper-inner">
           <div className="mobile-header-content-area">
@@ -221,6 +191,25 @@ function Header() {
                         <a>Category</a>
                       </Link>
                     </li>
+                    <li onClick={()=>toggleSubMobile()} className={`${toggleMobileSubMenu ? "has-children active":"has-children"}`}>
+                      <span class="menu-expand" >
+                        <i class="fi-rr-caret-down"></i>
+                      </span><a>Category</a>
+                      <ul className={`${toggleMobileSubMenu ? "sub-menu d-block":"d-none"}`}>
+                        {
+                        allCategoryData.map((category) => (
+                          <li key={category.id}>
+                            <Link href={`/category/${category.slug}`}>
+                              <a class="color-gray-500">{category.name}</a>
+                            </Link>
+                          </li>
+                        ))
+                      }
+                      </ul>
+                
+                    </li>
+
+
                     <li>
                       <Link href={"/contact"}>
                         <a>Contact</a>

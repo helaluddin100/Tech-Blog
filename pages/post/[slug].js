@@ -16,6 +16,8 @@ const SinglePost = () => {
         const response = await fetch(`${baseuri}/api/posts/${slug}`);
         const data = await response.json();
         setPostData(data);
+
+        console.log("data",data)
       } catch (error) {
         console.error("Error fetching post data:", error);
       }
@@ -46,11 +48,27 @@ const SinglePost = () => {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta property="og:locale" content="en_US"/>
+        <meta charset="UTF-8"/>
         <title>{postData.title}</title>
         <meta property="og:title" content={postData.seo_title} />
-        <meta name="description" content={postData.seo_description}></meta>
-        <meta name="og:description" content={postData.seo_description}></meta>
+        <meta name="description" content={postData.seo_description}/>
+        <meta name="og:description" content={postData.seo_description}/>
         <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://bitsofdev/${postData.slug}`}/>
+        <meta property="og:site_name" content="Bit Of Dev"/>
+        <meta property="article:tag" content="Tech Blogs"></meta>
+        <meta property="article:tag" content="Technology Updates"></meta>
+        <meta property="article:section" content="Resources"/>
+        <meta property="og:updated_time" content={`${postData.updated_at}`}/>
+        <meta property="og:image:secure_url" content={`${baseuri}/` + "image/post/" + postData.image}></meta>
+        <meta property="og:image:width" content="800"></meta>
+        <meta property="og:image:height" content="533"></meta>
+        <meta property="og:image:type" content="image/jpeg"></meta>
+        <meta property="article:published_time" content={`${postData.created_at}`}></meta>
+        <meta property="article:modified_time" content={`${postData.updated_at}`}></meta>
+        <meta property="og:image:alt" content="35+ Best Technology Websites &amp; Blogs"></meta>
         <meta
           property="og:image"
           content={`${baseuri}/` + "image/post/" + postData.image}
@@ -62,7 +80,29 @@ const SinglePost = () => {
         />
         <meta name="keywords" content={postData.fc_keyword}></meta>
         <link rel="icon" type="image" href="/favicon.png"></link>
+
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content={postData.seo_title}></meta>
+        <meta name="twitter:description" content={postData.seo_description}></meta>
+        <meta name="twitter:site" content="@knowledgelover7"></meta>
+        <meta name="twitter:creator" content="@gauravdhiman"></meta>
+        <meta name="twitter:image" content="https://knowledgelover.com/core/image/Technology-Lover.jpg"></meta>
+
       </Head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <main class="main">
         <div class="cover-home3">
           <div class="container">
@@ -78,7 +118,7 @@ const SinglePost = () => {
                         </Link>
                       </li>
                       <li>
-                        <a href="blog-archive.html">Blog</a>
+                        <a href="/Allpost">Blog</a>
                       </li>
                       <li>
                         <span>{postData.title}</span>

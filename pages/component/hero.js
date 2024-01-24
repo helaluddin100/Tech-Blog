@@ -44,16 +44,6 @@ function hero() {
                   className="card-style-2 hover-up hover-neon wow animate__animated animate__fadeInUp"
                   data-wow-delay="0s"
                 >
-                  <div className="card-image">
-                    <Link href={`/category/${category.slug}`}>
-                      <a>
-                        <img
-                          src={`${baseuri}/` + "image/" + category.image}
-                          alt={category.name}
-                        />
-                      </a>
-                    </Link>
-                  </div>
                   <div className="card-info">
                     <Link href={`/category/${category.slug}`}>
                       <a className="color-gray-500">{category.name}</a>

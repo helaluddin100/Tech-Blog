@@ -4,6 +4,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 import "../styles/css/style.css";
+import "../styles/css/custom.css";
 
 import { Fragment, useEffect } from "react";
 import { useRouter } from "next/router";

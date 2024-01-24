@@ -68,7 +68,7 @@ const PostsByCategoryPage = () => {
                           </Link>
                         </li>
                         <li>
-                          <span> {categorySlug}</span>
+                          <a> {categorySlug}</a>
                         </li>
                       </ul>
                     </div>
