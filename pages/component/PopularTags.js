@@ -33,16 +33,16 @@ const PopularTags = () => {
 
   return (
     <div>
-      <div class="box-sidebar bg-gray-850 border-gray-800">
-        <div class="head-sidebar">
-          <h5 class="line-bottom d-inline-block ">Popular Tags</h5>
+      <div className="box-sidebar bg-gray-850 border-gray-800">
+        <div className="head-sidebar">
+          <h5 className="line-bottom d-inline-block ">Popular Tags</h5>
         </div>
-        <div class="content-sidebar pb-20">
+        <div className="content-sidebar pb-20">
           {popularTags.map((tag) => (
-            <Link href={`/tag/${tag.slug}`}>
+            <Link href={`/tag/${tag.slug}`} key={tag.id}>
               <a
                 key={tag.id}
-                class="btn btn-tags bg-gray-850 border-gray-800 mr-10 mb-10 bdrd16 "
+                className="btn btn-tags bg-gray-850 border-gray-800 mr-10 mb-10 bdrd16 "
               >
                 {tag.name} Posts: {tag.posts_count}
               </a>

@@ -30,13 +30,10 @@ function hero() {
     <div>
       {/* Your existing code */}
       <div className="banner banner-home2">
-        <div class="text-center">
-          <h6 class="color-gray-600">Welcome to our blog</h6>
-          <h1 class="color-white">
-            Being<span class="color-linear"> Unique</span> is better
-            <br class="d-none d-lg-block" />
-            than being
-            <span class="color-linear">Erfect</span>
+        <div className="text-center">
+          <h1 className="color-white">
+            Tomorrow's <span className="color-linear"> Tech</span>, Today's
+            Insights: Uncover the <span className="color-linear">Trends</span>
           </h1>
         </div>
         <div className="text-center mt-50">
