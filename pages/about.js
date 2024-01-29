@@ -20,7 +20,6 @@ const AboutPage = () => {
                 <div className="row d-flex align-items-center">
                   <div className="col-md-6">
                     <div className="about-us-left">
-                      <h3 className=" color-white mb-30">Description</h3>
                       <h4 className=" color-white mb-10">Our Story</h4>
                       <p>
                         At Bits of Dev, we believe in the power of technology to
