@@ -6556,7 +6556,7 @@ iframe.google-map {
     width: 100%;
   }
   .footer-1 {
-    padding: 89px 30px 50px 30px;
+    padding: 50px 30px 50px 30px;
   }
   .header .main-header .header-nav {
     width: 0%;
@@ -6954,7 +6954,8 @@ iframe.google-map {
     min-width: 160px;
   }
   .footer-1 {
-    padding: 89px 20px 50px 20px;
+    padding: 50px 20px 50px 20px;
+    border-radius: 20px;
   }
   .box-quote {
     padding-left: 20px;

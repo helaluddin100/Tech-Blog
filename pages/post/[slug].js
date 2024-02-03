@@ -68,7 +68,7 @@ const SinglePost = () => {
         <meta property="og:image:type" content="image/jpeg"></meta>
         <meta property="article:published_time" content={`${postData.created_at}`}></meta>
         <meta property="article:modified_time" content={`${postData.updated_at}`}></meta>
-        <meta property="og:image:alt" content="35+ Best Technology Websites &amp; Blogs"></meta>
+        <meta property="og:image:alt" content={postData.seo_title}></meta>
         <meta
           property="og:image"
           content={`${baseuri}/` + "image/post/" + postData.image}
@@ -79,14 +79,7 @@ const SinglePost = () => {
           content={`${baseuri}/` + "image/post/" + postData.image}
         />
         <meta name="keywords" content={postData.fc_keyword}></meta>
-        <link rel="icon" type="image" href="/favicon.png"></link>
-
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:title" content={postData.seo_title}></meta>
-        <meta name="twitter:description" content={postData.seo_description}></meta>
-        <meta name="twitter:site" content="@knowledgelover7"></meta>
-        <meta name="twitter:creator" content="@gauravdhiman"></meta>
-        <meta name="twitter:image" content="https://knowledgelover.com/core/image/Technology-Lover.jpg"></meta>
+        <link rel="icon" type="image" href="/favicon.svg"></link>
 
       </Head>
 

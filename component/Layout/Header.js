@@ -109,7 +109,7 @@ function Header() {
                   </li>
                   <li>
                     <Link href={"/about"}>
-                      <a className="color-gray-500">About Me</a>
+                      <a className="color-gray-500">About Us</a>
                     </Link>
                   </li>
                   <li>

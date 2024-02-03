@@ -78,6 +78,42 @@ h2.pp-title {
     font-size: 16px;
 }
 
+.error-wrapper{
+    align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 0 60px 0;
+} 
+.error-wrapper h1{
+        color: #e7ebf2;
+        font-size: 200px;
+        text-shadow: .05em .05em 0 rgba(0,0,0,.25);
+        white-space: nowrap;  
+}
+.error-wrapper h1 span {
+    animation: spooky 2s alternate infinite linear;
+    color: #528cce;
+    display: inline-block;
+  }
+  .error-wrapper h2{
+    font-size: 30px;
+    color: #b9e0f2;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  @keyframes spooky {
+    from {
+      transform: translatey(.15em) scaley(.95);
+    }
+    
+    to {
+      transform: translatey(-.15em);
+    }
+  }
+
 @media screen and (max-width: 992px) {
     .contact-us-header h1{
         font-size: 30px;
@@ -95,5 +131,23 @@ h2.pp-title {
         font-size: 40px;
         margin-bottom: 20px !important;
     }
+    .error-wrapper h1{
+        color: #e7ebf2;
+        font-size: 100px;
+}
     
+.error-wrapper{
+    padding: 70px 0 0 0;
+}
+.error-wrapper h2 {
+    margin-top: 26px;
+}
+.error-wrapper h1 span svg{
+    width: 70px;
+}
+.footer-1 {
+    margin: 50px 0px 24px 0px;
+    padding: 50px 128px 50px 128px;
+    border-radius: 16px
+}
 }
