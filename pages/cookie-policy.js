@@ -6,36 +6,39 @@ import AppLayout from "../component/Layout/Layout";
 function CookiesPolicyPage() {
   return (
     <div>
-      <Head>
-        <title>BITS OF DEV’s Cookies Policy</title>
-        <meta property="og:site_name" content="BITS OF DEV"></meta>
-        <meta property="og:type" content="website"></meta>
-        <meta property="og:url" content="https://www.bitsofdev.com" />
-        <meta
-          name="google-site-verification"
-          content="qLqpdaJEdfR47ipB9hZYNBRaViXucx7nOp3B5VCNLb0"
-        />
+    
+    <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta charset="UTF-8" />
+        <title>Cookie Policy - Bits Of Dev</title>
 
-        <meta
-          name="description"
-          content="These cookies policy are only intended to benefit the parties here to and are not intended to confer third-party status on any other person or entity"
-        ></meta>
-        <meta
-          name="og:description"
-          content="These cookies policy are only intended to benefit the parties here to and are not intended to confer third-party status on any other person or entity"
-        ></meta>
+        {/* <!-- Open Graph meta tags --> */}
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Cookie Policy - Bits Of Dev" />
+        <meta name="title" content="Cookie Policy - Bits Of Dev" />
+        <meta name="og:description" content="Learn more Cookie Policy Bit Of Dev. Its purpose, author, topics and more." />
+        <meta property="og:description" content="Learn more Cookie Policy Bit Of Dev. Its purpose, author, topics and more." />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:title"
-          content="BITS OF DEV’s Cookies Policy"
-        />
-        <meta property="og:image" content="assets/img/meta/cookie.jpg" />
-        <meta property="image" content="assets/img/meta/cookie.jpg" />
-        <meta
-          name="keywords"
-          content="nft, full stack, web development, website, website design , website development,development, BITS OF DEV, minting website"
-        ></meta>
-        <link rel="icon" type="image" href="/favicon.png"></link>
+        <meta property="og:url" content="https://bitsofdev.com/Allpost" />
+        <meta property="og:site_name" content="Bits Of Dev" />
+        <meta property="article:tag" content="technology news" />
+        <meta property="article:section" content="Resources" />
+        <meta property="og:image" content="/assets/imgs/meta-img/cookie-policy-bits-of-dev.jpg" />
+        <meta property="image" content="/assets/imgs/meta-img/cookie-policy-bits-of-dev.jpg" />
+        <meta property="og:image:secure_url" content="/assets/imgs/meta-img/cookie-policy-bits-of-dev.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Cookie Policy - Bits Of Dev" />
+
+        {/* <!-- Canonical URL --> */}
+        <link rel="canonical" href="https://bitsofdev.com/Allpost" />
+
+        {/* <!-- Keywords --> */}
+        <meta name="keywords" content="technology news, software development, programming tutorials, coding tips, web development, mobile app development, cybersecurity, artificial intelligence, machine learning, data science, cloud computing, tech reviews, gadget reviews, internet of things (IoT), tech trends, digital marketing strategies, SEO best practices, social media marketing, tech innovation, startup tips, tech events, coding languages (e.g., JavaScript, Python, Java), software architecture, tech careers, tech industry updates" />
+
+        {/* <!-- Favicon --> */}
+        <link rel="icon" type="image" href="/favicon.png" />
       </Head>
       <noscript>
         <iframe

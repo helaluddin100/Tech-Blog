@@ -17,8 +17,8 @@ function Home() {
 
         {/* <!-- Open Graph meta tags --> */}
         <meta property="og:locale" content="en_US" />
-        <meta property="og:title" content="Bit of dev - Every Day, Learn Something New" />
-        <meta name="title" content="Bit of dev - Every Day, Learn Something New" />
+        <meta property="og:title" content="Bits of dev - Every Day, Learn Something New" />
+        <meta name="title" content="Bits of dev - Every Day, Learn Something New" />
         <meta name="og:description" content="Learn new things every day, outsmart others, and value ideas that matter. Ideas, thoughts, stories, and resources for lifelong learners." />
         <meta property="og:description" content="Learn new things every day, outsmart others, and value ideas that matter. Ideas, thoughts, stories, and resources for lifelong learners." />
         <meta property="og:type" content="article" />
@@ -31,7 +31,7 @@ function Home() {
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Bit of dev - Every Day, Learn Something New" />
+        <meta property="og:image:alt" content="Bits of dev - Every Day, Learn Something New" />
 
         {/* <!-- Canonical URL --> */}
         <link rel="canonical" href="https://bitsofdev.com" />
@@ -40,7 +40,7 @@ function Home() {
         <meta name="keywords" content="technology news, software development, programming tutorials, coding tips, web development, mobile app development, cybersecurity, artificial intelligence, machine learning, data science, cloud computing, tech reviews, gadget reviews, internet of things (IoT), tech trends, digital marketing strategies, SEO best practices, social media marketing, tech innovation, startup tips, tech events, coding languages (e.g., JavaScript, Python, Java), software architecture, tech careers, tech industry updates" />
 
         {/* <!-- Favicon --> */}
-        <link rel="icon" type="image" href="/favicon.svg" />
+        <link rel="icon" type="image" href="/favicon.png" />
       </Head>
 
       <main className="main">

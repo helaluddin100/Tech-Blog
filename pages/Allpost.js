@@ -30,36 +30,40 @@ function Allpost() {
   }
   return (
     <div>
-         
-    <Head>
+      <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-        <meta property="og:locale" content="en_US"/>
-        <meta charset="UTF-8"/>
-        <title>All Blog - Bits Of Dev</title>
-        <meta property="og:title" content='All Blog - Bits Of Dev' />
-        <meta name="description" content='Learn more about Bit Of Dev. Its purpose, author, topics and more.'/>
-        <meta name="og:description" content={'Learn more about Bit Of Dev. Its purpose, author, topics and more.'}/>
+        <meta charset="UTF-8" />
+        <title>All Blogs - Bits Of Dev</title>
+
+        {/* <!-- Open Graph meta tags --> */}
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="All Blogs - Bits Of Dev" />
+        <meta name="title" content="All Blogs - Bits Of Dev" />
+        <meta name="og:description" content="Learn more All Blogs Bit Of Dev. Its purpose, author, topics and more." />
+        <meta property="og:description" content="Learn more All Blogs Bit Of Dev. Its purpose, author, topics and more." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://bitsofdev.com/about`}/>
-        <meta property="og:site_name" content="Bit Of Dev"/>
-        <meta property="article:tag" content="Tech Blogs"></meta>
-        <meta property="article:tag" content="Technology Updates"></meta>
-        <meta property="article:section" content="Resources"/>
-        <meta property="og:image:secure_url" content='/assets/imgs/meta/home.jpg'></meta>
-        <meta property="og:image:type" content="image/jpeg"></meta>
-        <meta property="og:image:alt" content='All Blog - Bits Of Dev'></meta>
-        <meta
-          property="og:image"
-          content={'/assets/imgs/meta/home.jpg'}
-        />
-        <link rel="canonical" href={'https://bitsofdev.com/about'} />
-        <meta
-          property="image"
-          content={'/assets/imgs/meta/home.jpg'}
-        />
-        <meta name="keywords" content='tech blog news lover best tech blog '></meta>
-        <link rel="icon" type="image" href="/favicon.svg"></link>
+        <meta property="og:url" content="https://bitsofdev.com/Allpost" />
+        <meta property="og:site_name" content="Bits Of Dev" />
+        <meta property="article:tag" content="technology news" />
+        <meta property="article:section" content="Resources" />
+        <meta property="og:image" content="/assets/imgs/meta-img/all-blogs-bit-of-dev.jpg" />
+        <meta property="image" content="/assets/imgs/meta-img/all-blogs-bit-of-dev.jpg" />
+        <meta property="og:image:secure_url" content="/assets/imgs/meta-img/all-blogs-bit-of-dev.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="All Blogs - Bits Of Dev" />
+
+        {/* <!-- Canonical URL --> */}
+        <link rel="canonical" href="https://bitsofdev.com/Allpost" />
+
+        {/* <!-- Keywords --> */}
+        <meta name="keywords" content="technology news, software development, programming tutorials, coding tips, web development, mobile app development, cybersecurity, artificial intelligence, machine learning, data science, cloud computing, tech reviews, gadget reviews, internet of things (IoT), tech trends, digital marketing strategies, SEO best practices, social media marketing, tech innovation, startup tips, tech events, coding languages (e.g., JavaScript, Python, Java), software architecture, tech careers, tech industry updates" />
+
+        {/* <!-- Favicon --> */}
+        <link rel="icon" type="image" href="/favicon.png" />
       </Head>
+
 
       <main class="main">
         <div class="cover-home3">

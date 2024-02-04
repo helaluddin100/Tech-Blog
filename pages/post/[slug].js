@@ -56,13 +56,13 @@ const SinglePost = () => {
         <meta name="description" content={postData.seo_description}/>
         <meta name="og:description" content={postData.seo_description}/>
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://bitsofdev/${postData.slug}`}/>
+        <meta property="og:url" content={`https://bitsofdev/post/${postData.slug}`}/>
         <meta property="og:site_name" content="Bit Of Dev"/>
         <meta property="article:tag" content="Tech Blogs"></meta>
         <meta property="article:tag" content="Technology Updates"></meta>
         <meta property="article:section" content="Resources"/>
         <meta property="og:updated_time" content={`${postData.updated_at}`}/>
-        <meta property="og:image:secure_url" content={`${baseuri}/` + "image/post/" + postData.image}></meta>
+
         <meta property="og:image:width" content="800"></meta>
         <meta property="og:image:height" content="533"></meta>
         <meta property="og:image:type" content="image/jpeg"></meta>

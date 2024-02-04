@@ -5,6 +5,8 @@ import Head from 'next/head';
 const AboutPage = () => {
   return (
     <>
+    
+
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
         <meta charset="UTF-8" />
@@ -12,7 +14,9 @@ const AboutPage = () => {
 
         {/* <!-- Open Graph meta tags --> */}
         <meta property="og:locale" content="en_US" />
+        <meta name="title" content="About - Bits Of Dev" />
         <meta property="og:title" content="About - Bits Of Dev" />
+        <meta name="og:description" content="Learn more about Bit Of Dev. Its purpose, author, topics and more." />
         <meta property="og:description" content="Learn more about Bit Of Dev. Its purpose, author, topics and more." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://bitsofdev.com/about" />
@@ -33,7 +37,7 @@ const AboutPage = () => {
         <meta name="keywords" content="technology news, software development, programming tutorials, coding tips, web development, mobile app development, cybersecurity, artificial intelligence, machine learning, data science, cloud computing, tech reviews, gadget reviews, internet of things (IoT), tech trends, digital marketing strategies, SEO best practices, social media marketing, tech innovation, startup tips, tech events, coding languages (e.g., JavaScript, Python, Java), software architecture, tech careers, tech industry updates" />
 
         {/* <!-- Favicon --> */}
-        <link rel="icon" type="image" href="/favicon.svg" />
+        <link rel="icon" type="image" href="/favicon.png" />
       </Head>
       <section className="about-us">
         <div className="container">
