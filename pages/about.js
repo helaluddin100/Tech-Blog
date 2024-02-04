@@ -5,36 +5,6 @@ import Head from 'next/head';
 const AboutPage = () => {
   return (
     <>
-    
-    <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-        <meta property="og:locale" content="en_US"/>
-        <meta charset="UTF-8"/>
-        <title>About - Bits Of Dev</title>
-        <meta property="og:title" content='About - Bits Of Dev' />
-        <meta name="description" content='Learn more about Bit Of Dev. Its purpose, author, topics and more.'/>
-        <meta name="og:description" content={'Learn more about Bit Of Dev. Its purpose, author, topics and more.'}/>
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://bitsofdev.com/about`}/>
-        <meta property="og:site_name" content="Bit Of Dev"/>
-        <meta property="article:tag" content="Tech Blogs"></meta>
-        <meta property="article:tag" content="Technology Updates"></meta>
-        <meta property="article:section" content="Resources"/>
-        <meta property="og:image:secure_url" content='/assets/imgs/meta/home.jpg'></meta>
-        <meta property="og:image:type" content="image/jpeg"></meta>
-        <meta property="og:image:alt" content='About - Bits Of Dev'></meta>
-        <meta
-          property="og:image"
-          content={'/assets/imgs/meta/home.jpg'}
-        />
-        <link rel="canonical" href={'https://bitsofdev.com/about'} />
-        <meta
-          property="image"
-          content={'/assets/imgs/meta/home.jpg'}
-        />
-        <meta name="keywords" content='tech blog news lover best tech blog '></meta>
-        <link rel="icon" type="image" href="/favicon.svg"></link>
-      </Head>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
         <meta charset="UTF-8" />

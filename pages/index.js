@@ -18,6 +18,8 @@ function Home() {
         {/* <!-- Open Graph meta tags --> */}
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content="Bit of dev - Every Day, Learn Something New" />
+        <meta name="title" content="Bit of dev - Every Day, Learn Something New" />
+        <meta name="og:description" content="Learn new things every day, outsmart others, and value ideas that matter. Ideas, thoughts, stories, and resources for lifelong learners." />
         <meta property="og:description" content="Learn new things every day, outsmart others, and value ideas that matter. Ideas, thoughts, stories, and resources for lifelong learners." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://bitsofdev.com" />
