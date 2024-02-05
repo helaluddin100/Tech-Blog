@@ -52,7 +52,7 @@ console.log('image',postData.image)
         <meta property="og:locale" content="en_US"/>
         <meta charset="UTF-8"/>
         <title>{postData.title}</title>
-        <meta property="og:title" content={postData.seo_title} />
+        <meta property="og:title" content={postData.title} />
         <meta name="description" content={postData.seo_description}/>
         <meta name="og:description" content={postData.seo_description}/>
         <meta property="og:type" content="article" />
@@ -62,7 +62,7 @@ console.log('image',postData.image)
         <meta property="article:tag" content="Technology Updates"></meta>
         <meta property="article:section" content="Resources"/>
         <meta property="og:updated_time" content={`${postData.updated_at}`}/>
-        <meta property="og:image:secure_url"  content={`${baseuri}/` + "image/post/" + postData.image} />
+       
         <meta property="og:image:width" content="800"></meta>
         <meta property="og:image:height" content="533"></meta>
         <meta property="og:image:type" content="image/jpeg"></meta>
@@ -73,14 +73,14 @@ console.log('image',postData.image)
           property="og:image"
           content={`${baseuri}/` + "image/post/" + postData.image}
         />
-        
-        <link rel="canonical" href={postData.top_description} />
+         <meta property="og:image:secure_url"  content={`${baseuri}/` + "image/post/" + postData.image} />
+        <link rel="canonical" href={`https://bitsofdev/post/${postData.slug}`} />
         <meta
           property="image"
           content={`${baseuri}/`+"image/post/"+postData.image}
         />
         <meta name="keywords" content={postData.fc_keyword}></meta>
-        <link rel="icon" type="image" href="/favicon.svg"></link>
+        <link rel="icon" type="image" href="/favicon.png"></link>
 
       </Head>
 

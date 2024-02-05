@@ -13,7 +13,7 @@ function Home() {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
         <meta charset="UTF-8" />
-        <title>Bit of dev - Every Day, Learn Something New</title>
+        <title>Bits of dev - Every Day, Learn Something New</title>
 
         {/* <!-- Open Graph meta tags --> */}
         <meta property="og:locale" content="en_US" />
