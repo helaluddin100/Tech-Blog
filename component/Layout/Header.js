@@ -90,7 +90,7 @@ function Header() {
                     className="logo-night"
                     alt="Bits Of Dev"
                     src="/assets/imgs/template/logo.svg"
-                  />
+                  />-
                   <img
                     className="d-none logo-day"
                     alt="Bits Of Dev"
@@ -120,13 +120,13 @@ function Header() {
                     </Link>
                   </li>
                   <li className="has-children">
-                    <a class="color-gray-500" href="/#">Category {" "}</a>
-                    <ul class="sub-menu two-col">
+                    <a className="color-gray-500" href="/#">Category {" "}</a>
+                    <ul className="sub-menu two-col">
                       {
                         allCategoryData.map((category) => (
                           <li key={category.id}>
                             <Link href={`/category/${category.slug}`}>
-                              <a class="color-gray-500">{category.name}</a>
+                              <a className="color-gray-500">{category.name}</a>
                             </Link>
                           </li>
                         ))
@@ -192,15 +192,15 @@ function Header() {
                       </Link>
                     </li>
                     <li onClick={()=>toggleSubMobile()} className={`${toggleMobileSubMenu ? "has-children active":"has-children"}`}>
-                      <span class="menu-expand" >
-                        <i class="fi-rr-caret-down"></i>
+                      <span className="menu-expand" >
+                        <i className="fi-rr-caret-down"></i>
                       </span><a>Category</a>
                       <ul className={`${toggleMobileSubMenu ? "sub-menu d-block":"d-none"}`}>
                         {
                         allCategoryData.map((category) => (
                           <li key={category.id}>
                             <Link href={`/category/${category.slug}`}>
-                              <a class="color-gray-500">{category.name}</a>
+                              <a className="color-gray-500">{category.name}</a>
                             </Link>
                           </li>
                         ))

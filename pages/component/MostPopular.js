@@ -45,21 +45,6 @@ function MostPopular() {
                 </Link>
               </div>
               <div className="card-info">
-                {/* <div className="row">
-                  <div className="col-7">
-                    <a
-                      className="color-gray-700 text-sm"
-                      href="blog-archive.html"
-                    >
-                      #Travel
-                    </a>
-                  </div>
-                  <div className="col-5 text-end">
-                    <span className="color-gray-700 text-sm timeread">
-                      3 mins read
-                    </span>
-                  </div>
-                </div> */}
                 <Link href={`post/${popular.slug}`}>
                   <h4 className="color-white mt-20">
                     {popular.title.length > 60

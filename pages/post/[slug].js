@@ -44,7 +44,7 @@ const SinglePost = () => {
       </div>
     );
   }
-
+console.log('image',postData.image)
   return (
     <>
       <Head>
@@ -62,7 +62,7 @@ const SinglePost = () => {
         <meta property="article:tag" content="Technology Updates"></meta>
         <meta property="article:section" content="Resources"/>
         <meta property="og:updated_time" content={`${postData.updated_at}`}/>
-
+        <meta property="og:image:secure_url"  content={`${baseuri}/` + "image/post/" + postData.image} />
         <meta property="og:image:width" content="800"></meta>
         <meta property="og:image:height" content="533"></meta>
         <meta property="og:image:type" content="image/jpeg"></meta>
@@ -73,10 +73,11 @@ const SinglePost = () => {
           property="og:image"
           content={`${baseuri}/` + "image/post/" + postData.image}
         />
+        
         <link rel="canonical" href={postData.top_description} />
         <meta
           property="image"
-          content={`${baseuri}/` + "image/post/" + postData.image}
+          content={`${baseuri}/`+"image/post/"+postData.image}
         />
         <meta name="keywords" content={postData.fc_keyword}></meta>
         <link rel="icon" type="image" href="/favicon.svg"></link>
@@ -96,18 +97,18 @@ const SinglePost = () => {
 
 
 
-      <main class="main">
-        <div class="cover-home3">
-          <div class="container">
-            <div class="row">
-              <div class="col-xl-1"></div>
-              <div class="col-xl-10 col-lg-12">
-                <div class="pt-30 border-bottom border-gray-800 pb-20">
-                  <div class="box-breadcrumbs">
-                    <ul class="breadcrumb">
+      <main className="main">
+        <div className="cover-home3">
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-1"></div>
+              <div className="col-xl-10 col-lg-12">
+                <div className="pt-30 border-bottom border-gray-800 pb-20">
+                  <div className="box-breadcrumbs">
+                    <ul className="breadcrumb">
                       <li>
                         <Link href={"/"}>
-                          <a class="home">Home</a>
+                          <a className="home">Home</a>
                         </Link>
                       </li>
                       <li>
@@ -119,10 +120,10 @@ const SinglePost = () => {
                     </ul>
                   </div>
                 </div>
-                <div class="row mt-50 align-items-end">
-                  <div class="col-lg-9 col-md-8">
-                    <h2 class="color-linear mb-30">{postData.title}</h2>
-                    <div class="box-author mb-20">
+                <div className="row mt-50 align-items-end">
+                  <div className="col-lg-9 col-md-8">
+                    <h2 className="color-linear mb-30">{postData.title}</h2>
+                    <div className="box-author mb-20">
                       <img
                         src={
                           `${baseuri}/` +
@@ -131,11 +132,11 @@ const SinglePost = () => {
                         }
                         alt={postData.title}
                       />
-                      <div class="author-info">
-                        <h6 class="color-gray-700">
+                      <div className="author-info">
+                        <h6 className="color-gray-700">
                           {postData.user ? postData.user.name : "Unknown"}
                         </h6>
-                        <span class="color-gray-700 text-sm mr-30">
+                        <span className="color-gray-700 text-sm mr-30">
                           {new Date(postData.created_at).toLocaleDateString(
                             "en-US",
                             {
@@ -145,27 +146,27 @@ const SinglePost = () => {
                             }
                           )}
                         </span>
-                        <span class="color-gray-700 text-sm">
+                        <span className="color-gray-700 text-sm">
                           {postData.view_count} Views this post
                         </span>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-md-4">
-                    <div class="box-share border-gray-800">
-                      <h6 class="d-inline-block color-gray-500 mr-10">Share</h6>
-                      <a class="icon-media icon-fb" href="#"></a>
-                      <a class="icon-media icon-tw" href="#"></a>
-                      <a class="icon-media icon-printest" href="#"></a>
+                  <div className="col-lg-3 col-md-4">
+                    <div className="box-share border-gray-800">
+                      <h6 className="d-inline-block color-gray-500 mr-10">Share</h6>
+                      <a className="icon-media icon-fb" href="#"></a>
+                      <a className="icon-media icon-tw" href="#"></a>
+                      <a className="icon-media icon-printest" href="#"></a>
                     </div>
                   </div>
                 </div>
-                <div class="row mt-50">
-                  <div class="col-lg-8">
-                    <div class="content-detail border-gray-800">
-                      <div class="mt-20 mb-20">
+                <div className="row mt-50">
+                  <div className="col-lg-8">
+                    <div className="content-detail border-gray-800">
+                      <div className="mt-20 mb-20">
                         <img
-                          class="img-bdrd-16"
+                          className="img-bdrd-16"
                           src={`${baseuri}/` + "image/post/" + postData.image}
                           alt={postData.title}
                         />
@@ -180,12 +181,12 @@ const SinglePost = () => {
                     </div>
 
                     {postData.tags && (
-                      <div class="box-tags">
+                      <div className="box-tags">
                         {postData.tags.map((tag) => (
                           <Link href={`/tag/${tag.slug}`}>
                             <a
                               key={tag.id}
-                              class="btn btn-tags bg-gray-850 border-gray-800 mr-10 hover-up"
+                              className="btn btn-tags bg-gray-850 border-gray-800 mr-10 hover-up"
                             >
                               #{tag.name}
                             </a>

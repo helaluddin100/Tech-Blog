@@ -4,7 +4,6 @@ import Fetcher from "../api/Fetcher";
 import Link from "next/link";
 function hero() {
   const baseuri = process.env.NEXT_PUBLIC_BACKEND_URL;
-  console.log("baseuri:", baseuri);
   const { data, error } = useSWR(`${baseuri}/api/allcategory`, Fetcher);
   if (error) {
     return <h1>failed to load</h1>;
