@@ -181,36 +181,43 @@ function Header() {
               <div className="mobile-menu-wrap mobile-header-border">
                 <nav className="mt-15">
                   <ul className="mobile-menu font-heading">
-                    <li>
+                    <li  onClick={toggleMobile}>
                       <Link href={"/"}>
                         <a>Home</a>
                       </Link>
                     </li>
-                    <li>
-                      <Link href={"/category"}>
-                        <a>Category</a>
+                    <li onClick={toggleMobile}>
+                      <Link href={"/about"} >
+                        <a className="color-gray-500">About Us</a>
                       </Link>
                     </li>
-                    <li onClick={()=>toggleSubMobile()} className={`${toggleMobileSubMenu ? "has-children active":"has-children"}`}>
+                    <li onClick={toggleMobile}>
+                      <Link href={"/Allpost"} >
+                        <a className="color-gray-500" href="#">
+                          All Blogs
+                        </a>
+                      </Link>
+                    </li>
+                    <li onClick={() => toggleSubMobile()} className={`${toggleMobileSubMenu ? "has-children active" : "has-children"}`}>
                       <span className="menu-expand" >
                         <i className="fi-rr-caret-down"></i>
                       </span><a>Category</a>
-                      <ul className={`${toggleMobileSubMenu ? "sub-menu d-block":"d-none"}`}>
+                      <ul className={`${toggleMobileSubMenu ? "sub-menu d-block" : "d-none"}`}>
                         {
-                        allCategoryData.map((category) => (
-                          <li key={category.id}>
-                            <Link href={`/category/${category.slug}`}>
-                              <a className="color-gray-500">{category.name}</a>
-                            </Link>
-                          </li>
-                        ))
-                      }
+                          allCategoryData.map((category) => (
+                            <li key={category.id} onClick={toggleMobile}>
+                              <Link href={`/category/${category.slug}`} >
+                                <a className="color-gray-500">{category.name}</a>
+                              </Link>
+                            </li>
+                          ))
+                        }
                       </ul>
-                
+
                     </li>
 
 
-                    <li>
+                    <li  onClick={toggleMobile}>
                       <Link href={"/contact-us"}>
                         <a>Contact</a>
                       </Link>

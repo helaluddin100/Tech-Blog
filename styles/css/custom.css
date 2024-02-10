@@ -1,153 +1,156 @@
 .author-info h6 {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .info-cat a {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .content-detail p {
-    font-size: 16px;
-    line-height: 165%;
+  font-size: 16px;
+  line-height: 165%;
 }
 
 .card-info h4 {
-    cursor: pointer;
+  cursor: pointer;
 }
 img.logo-night {
-    width: 50px;
+  width: 50px;
 }
-.contact-us-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-    width: 60%;
-    flex-direction: column;
-    padding-bottom: 50px;
+.contact-us-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  flex-direction: column;
+  padding-bottom: 50px;
 }
-.contact-us-header h1{
-    font-size: 40px;
-    color: #fff;
-    font-weight: 600;
+.contact-us-header h1 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 600;
 }
-.input-fuild-item{
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.input-fuild-item {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-.input-fuild-item label{
-    font-size: 18px;
+.input-fuild-item label {
+  font-size: 18px;
 }
 
-.input-fuild-item .form-control{
-    background: none;
-    padding: 12px 20px;
+.input-fuild-item .form-control {
+  background: none;
+  padding: 12px 20px;
 }
 .section-title {
-    width: 60%;
-    margin: auto;
-    text-align: center;
+  width: 60%;
+  margin: auto;
+  text-align: center;
 }
 
 h2.sec-title:before {
-    content: "";
-    position: absolute;
-    height: 5px;
-    width: 40%;
-    background: linear-gradient(90deg,#4355b4,#fa00ff);
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    left: 29%;
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 40%;
+  background: linear-gradient(90deg, #4355b4, #fa00ff);
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  left: 29%;
 }
 .terms-conditions {
-    padding: 100px 0;
+  padding: 100px 0;
 }
 h2.pp-title {
-    font-size: 24px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 .urbanist-black-16 {
-    font-weight: 500;
-    font-size: 16px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-.error-wrapper{
-    align-items: center;
+.error-wrapper {
+  align-items: center;
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
   text-align: center;
   padding: 100px 0 60px 0;
-} 
-.error-wrapper h1{
-        color: #e7ebf2;
-        font-size: 200px;
-        text-shadow: .05em .05em 0 rgba(0,0,0,.25);
-        white-space: nowrap;  
+}
+.error-wrapper h1 {
+  color: #e7ebf2;
+  font-size: 200px;
+  text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
 }
 .error-wrapper h1 span {
-    animation: spooky 2s alternate infinite linear;
-    color: #528cce;
-    display: inline-block;
-  }
-  .error-wrapper h2{
-    font-size: 30px;
-    color: #b9e0f2;
-    margin-top: 50px;
-    margin-bottom: 10px;
-  }
-  @keyframes spooky {
-    from {
-      transform: translatey(.15em) scaley(.95);
-    }
-    
-    to {
-      transform: translatey(-.15em);
-    }
-  }
-
-@media screen and (max-width: 992px) {
-    .contact-us-header h1{
-        font-size: 30px;
-    }
-    .contact-us-header{
-        width: 90%;
-        padding-bottom: 40px;
-    }
-    .section-title {
-        width: 90%;
-        margin: auto;
-        text-align: center;
-    }
-    .section-title h2{
-        font-size: 40px;
-        margin-bottom: 20px !important;
-    }
-    .error-wrapper h1{
-        color: #e7ebf2;
-        font-size: 100px;
-}
-    
-.error-wrapper{
-    padding: 70px 0 0 0;
+  animation: spooky 2s alternate infinite linear;
+  color: #528cce;
+  display: inline-block;
 }
 .error-wrapper h2 {
+  font-size: 30px;
+  color: #b9e0f2;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+@keyframes spooky {
+  from {
+    transform: translatey(0.15em) scaley(0.95);
+  }
+
+  to {
+    transform: translatey(-0.15em);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contact-us-header h1 {
+    font-size: 30px;
+  }
+  .contact-us-header {
+    width: 90%;
+    padding-bottom: 40px;
+  }
+  .section-title {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  .section-title h2 {
+    font-size: 40px;
+    margin-bottom: 20px !important;
+  }
+  .error-wrapper h1 {
+    color: #e7ebf2;
+    font-size: 100px;
+  }
+
+  .error-wrapper {
+    padding: 70px 0 0 0;
+  }
+  .error-wrapper h2 {
     margin-top: 26px;
-}
-.error-wrapper h1 span svg{
+  }
+  .error-wrapper h1 span svg {
     width: 70px;
-}
-.footer-1 {
+  }
+  .footer-1 {
     margin: 50px 0px 24px 0px;
     padding: 50px 128px 50px 128px;
-    border-radius: 16px
+    border-radius: 16px;
+  }
+  .about-us-right {
+    margin-top: 40px;
 }
 }
