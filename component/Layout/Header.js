@@ -211,7 +211,7 @@ function Header() {
 
 
                     <li>
-                      <Link href={"/contact"}>
+                      <Link href={"/contact-us"}>
                         <a>Contact</a>
                       </Link>
                     </li>

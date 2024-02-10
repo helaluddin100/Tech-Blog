@@ -79,10 +79,7 @@ function Allpost() {
                       </h1>
                     </div>
                     <p className="color-gray-500 text-base wow animate__animated animate__fadeIn">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nulla convallis nisi sed turpis vulputate viverra. Morbi
-                      ligula elit, hendrerit non nisl tincidunt, sodales
-                      consequat magna.
+                      Explore a comprehensive collection of articles covering diverse topics, ranging from technology and science to lifestyle and entertainment. Stay informed and entertained with a curated selection of engaging content, all conveniently accessible in one place. Dive into a world of knowledge and discovery with All Articles Show.
                     </p>
                   </div>
                   <div className="col-lg-5 mb-20 text-start text-lg-end">
