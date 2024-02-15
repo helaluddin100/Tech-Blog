@@ -17,7 +17,7 @@ const SinglePost = () => {
         const data = await response.json();
         setPostData(data);
 
-        console.log("data",data)
+        console.log("data", data)
       } catch (error) {
         console.error("Error fetching post data:", error);
       }
@@ -44,57 +44,36 @@ const SinglePost = () => {
       </div>
     );
   }
-console.log('image',postData.image)
+  console.log('image', postData.image)
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-        <meta property="og:locale" content="en_US"/>
-        <meta charset="UTF-8"/>
+        <meta property="og:locale" content="en_US" />
+        <meta charset="UTF-8" />
         <title>{postData.title}</title>
         <meta property="og:title" content={postData.title} />
-        <meta name="description" content={postData.seo_description}/>
-        <meta name="og:description" content={postData.seo_description}/>
+        <meta name="description" content={postData.seo_description} />
+        <meta name="og:description" content={postData.seo_description} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://bitsofdev/post/${postData.slug}`}/>
-        <meta property="og:site_name" content="Bit Of Dev"/>
-        <meta property="article:tag" content="Tech Blogs"></meta>
-        <meta property="article:tag" content="Technology Updates"></meta>
-        <meta property="article:section" content="Resources"/>
-        <meta property="og:updated_time" content={`${postData.updated_at}`}/>
-       
-        <meta property="og:image:width" content="800"></meta>
-        <meta property="og:image:height" content="533"></meta>
-        <meta property="og:image:type" content="image/jpeg"></meta>
-        <meta property="article:published_time" content={`${postData.created_at}`}></meta>
-        <meta property="article:modified_time" content={`${postData.updated_at}`}></meta>
-        <meta property="og:image:alt" content={postData.seo_title}></meta>
-        <meta
-          property="og:image"
-          content={`${baseuri}/` + "image/post/" + postData.image}
-        />
-         <meta property="og:image:secure_url"  content={`${baseuri}/` + "image/post/" + postData.image} />
-        <link rel="canonical" href={`https://bitsofdev/post/${postData.slug}`} />
-        <meta
-          property="image"
-          content={`${baseuri}/`+"image/post/"+postData.image}
-        />
-        <meta name="keywords" content={postData.fc_keyword}></meta>
-        <link rel="icon" type="image" href="/favicon.png"></link>
-
+        <meta property="og:url" content={`https://admin.bitsofdev.com/post/${postData.slug}`} />
+        <meta property="og:site_name" content="Bit Of Dev" />
+        <meta property="article:tag" content="Tech Blogs" />
+        <meta property="article:tag" content="Technology Updates" />
+        <meta property="article:section" content="Resources" />
+        <meta property="og:updated_time" content={postData.updated_at} />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="533" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="article:published_time" content={postData.created_at} />
+        <meta property="article:modified_time" content={postData.updated_at} />
+        <meta property="og:image:alt" content={postData.seo_title} />
+        <meta property="og:image" content={`https://admin.bitsofdev.com/image/post/${postData.image}`} />
+        <meta property="og:image:secure_url" content={`https://admin.bitsofdev.com/image/post/${postData.image}`} />
+        <link rel="canonical" href={`https://admin.bitsofdev.com/post/${postData.slug}`} />
+        <meta name="keywords" content={postData.fc_keyword} />
+        <link rel="icon" type="image" href="/favicon.png" />
       </Head>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       <main className="main">
