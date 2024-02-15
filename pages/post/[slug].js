@@ -69,7 +69,6 @@ const SinglePost = () => {
         <meta property="article:modified_time" content={postData.updated_at} />
         <meta property="og:image:alt" content={postData.seo_title} />
         <meta property="og:image" content={`https://admin.bitsofdev.com/image/post/${postData.image}`} />
-        <meta property="og:image:secure_url" content={`https://admin.bitsofdev.com/image/post/${postData.image}`} />
         <link rel="canonical" href={`https://admin.bitsofdev.com/post/${postData.slug}`} />
         <meta name="keywords" content={postData.fc_keyword} />
         <link rel="icon" type="image" href="/favicon.png" />
