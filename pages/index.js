@@ -16,6 +16,7 @@ function Home() {
         <title>Bits of dev - Every Day, Learn Something New</title>
 
         {/* <!-- Open Graph meta tags --> */}
+        
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content="Bits of dev - Every Day, Learn Something New" />
         <meta name="title" content="Bits of dev - Every Day, Learn Something New" />
